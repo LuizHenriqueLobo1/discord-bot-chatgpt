@@ -1,7 +1,7 @@
 {
-  "name": "chagpt-test",
+  "name": "discord-bot-chatgpt",
   "version": "1.0.0",
-  "description": "",
+  "description": "Um bot para Discord integrado ao ChatGPT.",
   "main": "index.js",
   "type": "module",
   "scripts": {
