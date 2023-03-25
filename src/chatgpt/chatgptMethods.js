@@ -1,6 +1,10 @@
 import { chatgpt } from "./chatgptSettings.js";
 
+let currentParentMessageId = "";
+
 export async function askQuestion(question) {
-  const res = await chatgpt.sendMessage(question);
-  return res.text;
+  const options = currentParentMessageId.length ? { parentMessageId: currentParentMessageId } : {};  
+  const response = await chatgpt.sendMessage(question, options);
+  currentParentMessageId = response.parentMessageId;
+  return response.text;
 }
