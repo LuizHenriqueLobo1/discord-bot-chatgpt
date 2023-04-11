@@ -1,4 +1,4 @@
-import { askQuestion } from "./chatgpt/chatgptMethods.js";
+import { askQuestion } from "./chatgpt/chatgptMethods";
 import { Client, GatewayIntentBits, Partials } from "discord.js";
 import { config } from "dotenv";
 
@@ -15,7 +15,7 @@ const discordClient = new Client({
 });
 
 discordClient.on("ready", () => {
-  console.log(`Logged in as ${discordClient.user.tag}!`);
+  console.log(`Logged in as ${discordClient?.user?.tag}!`);
 });
 
 discordClient.login(process.env.DISCORD_BOT_TOKEN);

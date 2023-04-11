@@ -4,5 +4,5 @@ import { config } from "dotenv";
 config();
 
 export const chatgpt = new ChatGPTAPI({
-  apiKey: process.env.OPENIA_API_KEY
+  apiKey: process.env.OPENIA_API_KEY as string
 });
