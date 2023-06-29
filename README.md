@@ -14,6 +14,10 @@
 
 * Clone o projeto: `https://github.com/LuizHenriqueLobo1/discord-bot-chatgpt.git`
 * Instale as dependências: `npm i`
+* Crie o arquivo **.env**:
+  * Windows: `copy .env.example .env`
+  * Linux: `cp .env.example .env`
+* Configure as variáveis de ambiente no arquivo **.env**
 * Rode o projeto: `npm start`
 
 ---
