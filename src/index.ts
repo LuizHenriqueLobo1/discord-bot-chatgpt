@@ -21,7 +21,7 @@ discordClient.on("ready", () => {
 discordClient.login(process.env.DISCORD_BOT_TOKEN);
 
 discordClient.on("messageCreate", async message => {
-  if(!message.content.length) return;
+  if(!message.content.length || message.channelId !== process.env.ALLOWED_CHANNEL_ID) return;
   if(!message.author.bot) {
     const response = await askQuestion(message.content);
     message.reply(response);
